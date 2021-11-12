@@ -1,12 +1,12 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack-cli**, you can now run
-
+# 🚀 Welcome, Airat!!!
 ```
 npm run build
 ```
-npm install babel-loader
-
 ...
-
+```
+npm install babel-loader
+```
+...
+```
 node liveserver.js
+```
