@@ -27,11 +27,14 @@ module.exports = {
   plugins: [
     // To learn more about the usage of this plugin, please visit https://webpack.js.org/plugins/module-federation-plugin/
     new ModuleFederationPlugin({
-      name: 'rolesManagement',
-      filename: 'remoteEntry.js',
-      exposes: {
-        './rolesManagement': './src/index.js',
-      },
+      name: "mfe4",
+          library: { type: "var", name: "mfe4" },
+          filename: "remoteEntry.js",
+          exposes: {
+              './web-components': './src/App.js',
+          },        
+
+          shared: ["react", "react-dom"]
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
