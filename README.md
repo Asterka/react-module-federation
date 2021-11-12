@@ -5,11 +5,8 @@ This project has been created using **webpack-cli**, you can now run
 ```
 npm run build
 ```
+npm install babel-loader
 
-or
+...
 
-```
-yarn build
-```
-
-to bundle your application
+node liveserver.js
