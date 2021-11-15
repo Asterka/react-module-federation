@@ -3,6 +3,8 @@ import React, { useRef, useMemo, useState } from 'react'
 import { Canvas, useFrame, useThree, createPortal } from '@react-three/fiber'
 import { OrbitControls, OrthographicCamera, useCamera } from '@react-three/drei'
 import reactDom from 'react-dom'
+import CardComponent from './Card'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Viewcube() {
   const { gl, scene, camera, size } = useThree()
@@ -46,6 +48,7 @@ function Viewcube() {
 export default function App() {
   return (
     <div className="w-sreen h-screen">
+      <CardComponent/>
       <Canvas>
         <mesh>
           <torusGeometry args={[1, 0.5, 32, 100]} />

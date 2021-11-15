@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_webpack_project=self.webpackChunkmy_webpack_project||[]).push([[160],{160:function(e,n,c){c.r(n);var t=c(407),a=c.n(t);n.default=()=>(console.log("I am rendered"),a().createElement("div",{style:{margin:"10px",padding:"10px",textAlign:"center",backgroundColor:"cyan"}},a().createElement("h1",null,"App 2")))}}]);
