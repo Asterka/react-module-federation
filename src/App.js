@@ -68,17 +68,7 @@ export default function App() {
 
 class Mfe4Element extends HTMLElement {
   connectedCallback() {
-    // Create web component with target div inside it.
-    const container = document.createElement('mfe4-element');
-    document.body.appendChild(container);
-
-    // Add shadow root to component.
-    const shadow = document.querySelector('mfe4-element').attachShadow({ mode: 'open' });
-
-    // Select the web component, then the shadowRoot.
-    const target = document.querySelector('mfe4-element').shadowRoot;
-
-    reactDom.render(<App/>, target);
+    reactDom.render(<App/>, this);
   }
 }
 
