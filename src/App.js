@@ -4,7 +4,6 @@ import { Canvas, useFrame, useThree, createPortal } from '@react-three/fiber'
 import { OrbitControls, OrthographicCamera, useCamera } from '@react-three/drei'
 import reactDom from 'react-dom'
 import CardComponent from './Card'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Viewcube() {
   const { gl, scene, camera, size } = useThree()
@@ -48,6 +47,12 @@ function Viewcube() {
 export default function App() {
   return (
     <div className="w-sreen h-screen">
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
       <CardComponent/>
       <Canvas>
         <mesh>
@@ -63,7 +68,17 @@ export default function App() {
 
 class Mfe4Element extends HTMLElement {
   connectedCallback() {
-    reactDom.render(<App/>, this);
+    // Create web component with target div inside it.
+    const container = document.createElement('mfe4-element');
+    document.body.appendChild(container);
+
+    // Add shadow root to component.
+    const shadow = document.querySelector('mfe4-element').attachShadow({ mode: 'open' });
+
+    // Select the web component, then the shadowRoot.
+    const target = document.querySelector('mfe4-element').shadowRoot;
+
+    reactDom.render(<App/>, target);
   }
 }
 
