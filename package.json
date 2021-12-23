@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@innouni/ngx-event-bus-test": "^0.0.8",
     "@react-three/drei": "^7.20.5",
     "@react-three/fiber": "^7.0.19",
     "@testing-library/jest-dom": "^5.14.1",
@@ -54,7 +55,12 @@
     ]
   },
   "devDependencies": {
-    "@webpack-cli/generators": "^2.4.1"
+    "@innouni/ngx-event-bus-test": "^0.0.8",
+    "@types/react": "^17.0.37",
+    "@webpack-cli/generators": "^2.4.1",
+    "primereact": "^7.1.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4"
   },
   "description": "My webpack project"
 }

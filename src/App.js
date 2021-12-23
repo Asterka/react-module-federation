@@ -23,7 +23,6 @@ function Viewcube() {
     gl.clearDepth()
     gl.render(virtualScene, virtualCam.current)
   }, 1)
-
   return createPortal(
     <>
       <OrthographicCamera ref={virtualCam} makeDefault={false} position={[0, 0, 100]} />
@@ -46,6 +45,14 @@ function Viewcube() {
 }
 
 export default function App() {
+
+      // EventBus.getInstance().register('hello-world', (name) => {
+      //     if(name)
+      //         console.log('Hello ' + name);
+      //     else
+      //         console.log('Hello world');
+      // });
+
   return (
     <div className="w-sreen h-screen">
       <CardComponent/>
